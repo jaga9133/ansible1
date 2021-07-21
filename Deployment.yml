@@ -5,7 +5,7 @@
     
   - name: download artifacts
     get_url: 
-      url: http://18.117.9.166:8081/nexus/service/local/repositories/jaga/content/java1/api/15/api-15.war
+      url: http://18.117.9.166:8081/nexus/service/local/repositories/jaga/content/java1/api/16/api-16.war
       dest: /usr/share/tomcat
       url_username: jaga
       url_password: jaga
