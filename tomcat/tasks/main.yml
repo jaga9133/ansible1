@@ -1,0 +1,21 @@
+---
+- name: install required packages
+  yum:
+    name: "{{ item }} "
+  with_items:
+  - java-1.8.0-openjdk
+  - tomcat
+  - tomcat-webapps
+  - tomcat-admin-webapps
+
+- name: copy user.xml
+  template:
+    src: tomcat-user.xml
+    dest: /usr/share/tomcat/conf
+
+- name: retsart tomcat
+  systemd:
+    name: tomcat
+    state: restarted
+
+# tasks file for tomcat
